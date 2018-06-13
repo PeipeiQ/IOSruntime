@@ -7,22 +7,48 @@
 //
 
 #import "ViewController.h"
+#import "RuntimeManager.h"
+#import "TestModel.h"
+#import <objc/runtime.h>
+
 
 @interface ViewController ()
-
+@property(nonatomic,strong) RuntimeManager *manager;
 @end
 
 @implementation ViewController
 
+//+(void)load{
+//    NSLog(@"load");
+//}
+//
+//+(void)initialize{
+//    NSLog(@"vc initialize");
+//}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    _manager = [RuntimeManager manager];
+    
+    //runtime1:字典转模型
+    NSDictionary *dict = @{@"name":@"jack",@"game":@[@1,@2,@3]};
+    TestModel *model = [[TestModel alloc]init];
+    model = (TestModel*)[_manager objcWithDict:dict modelClass:[TestModel class] mapDict:nil];
+    //NSLog(@"%@,%ld,%@,%@",model.name,(long)model.age,model.game,model.country);
+    
+    //
+    [_manager getBlueColor];
+    
+}
+
+-(void)eat{
+    
 }
 
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
 
 

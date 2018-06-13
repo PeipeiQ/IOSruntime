@@ -15,6 +15,9 @@
 		78BCA90820D101B500B97B58 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 78BCA90720D101B500B97B58 /* main.m */; };
 		78BCA91220D101B500B97B58 /* IOSruntimeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 78BCA91120D101B500B97B58 /* IOSruntimeTests.m */; };
 		78BCA91D20D101B500B97B58 /* IOSruntimeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 78BCA91C20D101B500B97B58 /* IOSruntimeUITests.m */; };
+		78BCA93020D10D8000B97B58 /* TestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 78BCA92F20D10D8000B97B58 /* TestModel.m */; };
+		78BCA93620D10EEE00B97B58 /* RuntimeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 78BCA93520D10EEE00B97B58 /* RuntimeManager.m */; };
+		78BCA93920D11DC000B97B58 /* NSObject+MethodSwizzing.m in Sources */ = {isa = PBXBuildFile; fileRef = 78BCA93820D11DC000B97B58 /* NSObject+MethodSwizzing.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,12 @@
 		78BCA91820D101B500B97B58 /* IOSruntimeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IOSruntimeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		78BCA91C20D101B500B97B58 /* IOSruntimeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IOSruntimeUITests.m; sourceTree = "<group>"; };
 		78BCA91E20D101B500B97B58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78BCA92E20D10D8000B97B58 /* TestModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestModel.h; sourceTree = "<group>"; };
+		78BCA92F20D10D8000B97B58 /* TestModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestModel.m; sourceTree = "<group>"; };
+		78BCA93420D10EEE00B97B58 /* RuntimeManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimeManager.h; sourceTree = "<group>"; };
+		78BCA93520D10EEE00B97B58 /* RuntimeManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeManager.m; sourceTree = "<group>"; };
+		78BCA93720D11DC000B97B58 /* NSObject+MethodSwizzing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+MethodSwizzing.h"; sourceTree = "<group>"; };
+		78BCA93820D11DC000B97B58 /* NSObject+MethodSwizzing.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MethodSwizzing.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +110,7 @@
 		78BCA8F720D101AE00B97B58 /* IOSruntime */ = {
 			isa = PBXGroup;
 			children = (
+				78BCA92D20D10D6F00B97B58 /* model */,
 				78BCA8F820D101AE00B97B58 /* AppDelegate.h */,
 				78BCA8F920D101AE00B97B58 /* AppDelegate.m */,
 				78BCA8FB20D101AE00B97B58 /* ViewController.h */,
@@ -110,6 +120,10 @@
 				78BCA90320D101B500B97B58 /* LaunchScreen.storyboard */,
 				78BCA90620D101B500B97B58 /* Info.plist */,
 				78BCA90720D101B500B97B58 /* main.m */,
+				78BCA93420D10EEE00B97B58 /* RuntimeManager.h */,
+				78BCA93520D10EEE00B97B58 /* RuntimeManager.m */,
+				78BCA93720D11DC000B97B58 /* NSObject+MethodSwizzing.h */,
+				78BCA93820D11DC000B97B58 /* NSObject+MethodSwizzing.m */,
 			);
 			path = IOSruntime;
 			sourceTree = "<group>";
@@ -130,6 +144,15 @@
 				78BCA91E20D101B500B97B58 /* Info.plist */,
 			);
 			path = IOSruntimeUITests;
+			sourceTree = "<group>";
+		};
+		78BCA92D20D10D6F00B97B58 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				78BCA92E20D10D8000B97B58 /* TestModel.h */,
+				78BCA92F20D10D8000B97B58 /* TestModel.m */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,8 +286,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				78BCA8FD20D101AE00B97B58 /* ViewController.m in Sources */,
+				78BCA93920D11DC000B97B58 /* NSObject+MethodSwizzing.m in Sources */,
+				78BCA93020D10D8000B97B58 /* TestModel.m in Sources */,
 				78BCA90820D101B500B97B58 /* main.m in Sources */,
 				78BCA8FA20D101AE00B97B58 /* AppDelegate.m in Sources */,
+				78BCA93620D10EEE00B97B58 /* RuntimeManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +460,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8USF88UFL4;
 				INFOPLIST_FILE = IOSruntime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -450,6 +477,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8USF88UFL4;
 				INFOPLIST_FILE = IOSruntime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
