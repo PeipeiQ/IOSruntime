@@ -27,6 +27,7 @@
         _instance = [[self alloc]init];
     });
     return _instance;
+    
 }
 
 #pragma -mark runtime应用一：字典转模型
@@ -120,8 +121,35 @@
     NSLog(@"orange");
 }
 //使用场景一：在一些系统方法中动态添加一些操作。例如在setvalue:forkey:中输出value和key的值
+//使用场景二：需要在category中重写一些方法
+
 
 #pragma -mark runtime应用三：对象关联
+/*
+ 主要解决的问题：分类不能添加属性
+ 我们知道在一个类中用@property声明属性，编译器会自动帮我们生成_成员变量和setter/getter，但分类的指针结构体中，根本没有属性列表。所以
+ 在分类中用@property声明属性，既无法生成_成员变量也无法生成setter/getter。
+ 因此结论是：我们可以用@property声明属性，编译和运行都会通过，只要不使用程序也不会崩溃。但如果调用了_成员变量和setter/getter方法，报
+ 错就在所难免了。
+ 由于OC是动态语言，方法真正的实现是通过runtime完成的，虽然系统不给我们生成setter/getter，但我们可以通过runtime手动添加setter/getter
+ 方法。
+ */
+
+/*
+ Category
+ Category 是表示一个指向分类的结构体的指针，其定义如下：
+ typedef struct objc_category *Category;
+ struct objc_category {
+ char *category_name                          OBJC2_UNAVAILABLE; // 分类名
+ char *class_name                             OBJC2_UNAVAILABLE; // 分类所属的类名
+ struct objc_method_list *instance_methods    OBJC2_UNAVAILABLE; // 实例方法列表
+ struct objc_method_list *class_methods       OBJC2_UNAVAILABLE; // 类方法列表
+ struct objc_protocol_list *protocols         OBJC2_UNAVAILABLE; // 分类所实现的协议列表
+ }
+ 通过上面我们可以发现，这个结构体主要包含了分类定义的实例方法与类方法，其中instance_methods 列表是 objc_class 中方法列表的一个子集，而class_methods列表是元类方法列表的一个子集。
+ 但这个结构体里面根本没有属性列表.
+ */
+
 
 
 

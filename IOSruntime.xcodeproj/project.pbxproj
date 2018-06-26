@@ -18,6 +18,7 @@
 		78BCA93020D10D8000B97B58 /* TestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 78BCA92F20D10D8000B97B58 /* TestModel.m */; };
 		78BCA93620D10EEE00B97B58 /* RuntimeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 78BCA93520D10EEE00B97B58 /* RuntimeManager.m */; };
 		78BCA93920D11DC000B97B58 /* NSObject+MethodSwizzing.m in Sources */ = {isa = PBXBuildFile; fileRef = 78BCA93820D11DC000B97B58 /* NSObject+MethodSwizzing.m */; };
+		9699DC8F20D3B0A900896914 /* NSArray+runtimeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9699DC8E20D3B0A900896914 /* NSArray+runtimeTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		78BCA93520D10EEE00B97B58 /* RuntimeManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeManager.m; sourceTree = "<group>"; };
 		78BCA93720D11DC000B97B58 /* NSObject+MethodSwizzing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+MethodSwizzing.h"; sourceTree = "<group>"; };
 		78BCA93820D11DC000B97B58 /* NSObject+MethodSwizzing.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MethodSwizzing.m"; sourceTree = "<group>"; };
+		9699DC8D20D3B0A900896914 /* NSArray+runtimeTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+runtimeTest.h"; sourceTree = "<group>"; };
+		9699DC8E20D3B0A900896914 /* NSArray+runtimeTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+runtimeTest.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +127,8 @@
 				78BCA93520D10EEE00B97B58 /* RuntimeManager.m */,
 				78BCA93720D11DC000B97B58 /* NSObject+MethodSwizzing.h */,
 				78BCA93820D11DC000B97B58 /* NSObject+MethodSwizzing.m */,
+				9699DC8D20D3B0A900896914 /* NSArray+runtimeTest.h */,
+				9699DC8E20D3B0A900896914 /* NSArray+runtimeTest.m */,
 			);
 			path = IOSruntime;
 			sourceTree = "<group>";
@@ -287,6 +292,7 @@
 			files = (
 				78BCA8FD20D101AE00B97B58 /* ViewController.m in Sources */,
 				78BCA93920D11DC000B97B58 /* NSObject+MethodSwizzing.m in Sources */,
+				9699DC8F20D3B0A900896914 /* NSArray+runtimeTest.m in Sources */,
 				78BCA93020D10D8000B97B58 /* TestModel.m in Sources */,
 				78BCA90820D101B500B97B58 /* main.m in Sources */,
 				78BCA8FA20D101AE00B97B58 /* AppDelegate.m in Sources */,

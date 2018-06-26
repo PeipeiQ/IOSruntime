@@ -10,6 +10,7 @@
 #import "RuntimeManager.h"
 #import "TestModel.h"
 #import <objc/runtime.h>
+#import "NSArray+runtimeTest.h"
 
 
 @interface ViewController ()
@@ -36,9 +37,18 @@
     model = (TestModel*)[_manager objcWithDict:dict modelClass:[TestModel class] mapDict:nil];
     //NSLog(@"%@,%ld,%@,%@",model.name,(long)model.age,model.game,model.country);
     
-    //
+    //runtime2:方法交换
     [_manager getBlueColor];
     
+    NSArray *array = @[@1,@2,@3];
+    Class a = object_getClass(array);    //输出__NSArrayI
+    NSNumber *num = [array objectAtIndex:3];
+    
+    //runtime3:对象关联
+    array.arrName = @"abc";
+    NSString *aName = array.arrName;
+    NSLog(@"对象关联：%@",aName);
+
 }
 
 -(void)eat{
